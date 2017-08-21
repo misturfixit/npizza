@@ -1,22 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
 <form method="post" action="chozen">
+	<%if meat == nil%>
 
-<%meat.each do |meat|%>
-<p><input type="checkbox" name="pickem[]" value="<%=meat%>"> <%=meat%></p>
-<%end%>
+		<%else%>
+			<%meat.each do |meat|%>
+			<%=meat%>
+				<p><input type="radio" name="pickem[1]" value="<%=meat%>">  yes </p>
+			<p><input type="radio" name="pickem[2]"> no </p>
+		<%end%>
+	<%end%>	
 
-<%vegs.each do |vegs|%>
-<p><input type="checkbox" name="pickem[]" value="<%=vegs%>"> <%=vegs%></p>
-<%end%>
+	<%if vegs == nil%>
 
-<%cheeze.each do |cheeze|%>
-<p><input type="checkbox" name="pickem[]" value="<%=cheeze%>"> <%=cheeze%></p>
-<%end%>
+		<%else%>
+			<%vegs.each do |vegs|%>
+				<%=vegs%>
+		  		<p><input type="radio" name="pickem[]" value="<%=vegs%>"> <%=vegs%> yes </p>
+			 <p><input type="radio"> no </p>
+		<%end%>
+	<%end%>
 
-<%crust.each do |crust|%>
-<p><input type="checkbox" name="pickem[]" value="<%=crust%>"> <%=crust%></p>
-<%end%>
+	<%if cheeze == nil%>
 
-	Submit?????
-<input type="submit" value="~SNARF~">
+		<%else%>
+			<%cheeze.each do |cheeze|%>
+				<%=cheeze%>
+					<p><input type="checkbox" name="pickem[]" value="<%=cheeze%>"> <%=cheeze%></p>
+		<%end%>
+	<%end%>
+
+	<%crust.each do |crust|%>
+		<p><input type="checkbox" name="pickem[]" value="<%=crust%>"> <%=crust%></p>
+	<%end%>
+
+		Submit?????
+	<input type="submit" value="~SNARF~">
 
 </form>
+</body>
+</html>
