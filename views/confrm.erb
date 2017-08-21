@@ -1,0 +1,22 @@
+<form method="post" action="chozen">
+
+<%meat.each do |meat|%>
+<p><input type="checkbox" name="pickem[]" value="<%=meat%>"> <%=meat%></p>
+<%end%>
+
+<%vegs.each do |vegs|%>
+<p><input type="checkbox" name="pickem[]" value="<%=vegs%>"> <%=vegs%></p>
+<%end%>
+
+<%cheeze.each do |cheeze|%>
+<p><input type="checkbox" name="pickem[]" value="<%=cheeze%>"> <%=cheeze%></p>
+<%end%>
+
+<%crust.each do |crust|%>
+<p><input type="checkbox" name="pickem[]" value="<%=crust%>"> <%=crust%></p>
+<%end%>
+
+	Submit?????
+<input type="submit" value="~SNARF~">
+
+</form>
