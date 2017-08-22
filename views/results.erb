@@ -1,5 +1,11 @@
 And Your order is as follows: 
-<%checked.each do |choice|%>
-<h1>	<%=choice%> </h1>
-
+<%checked.each_pair do |choice, value|%>
+	<%if value == "on"%>
+		<%checked.delete(choice)%>
+	<%else%>	
+<h1>	<%=value%> </h1>
+	<%end%>
 <%end%>	
+
+And We're Delivering it to:
+<h1>	<%=address%> </h1>

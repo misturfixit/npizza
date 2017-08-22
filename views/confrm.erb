@@ -12,37 +12,51 @@
 
 		<%else%>
 			<%meat.each do |meat|%>
-			<%=meat%>
-				<p><input type="radio" name="pickem[1]" value="<%=meat%>">  yes </p>
-			<p><input type="radio" name="pickem[2]"> no </p>
-		<%end%>
+				<p><%=meat%>
+					<input type="radio" name="pickem[<%=meat%>]" 
+					value="<%=meat%>" checked>	yes 
+				<input type="radio" name="pickem[<%=meat%>]">  no  </p>
+			<%end%>
 	<%end%>	
 
 	<%if vegs == nil%>
 
 		<%else%>
 			<%vegs.each do |vegs|%>
-				<%=vegs%>
-		  		<p><input type="radio" name="pickem[]" value="<%=vegs%>"> <%=vegs%> yes </p>
-			 <p><input type="radio"> no </p>
-		<%end%>
+				<p><%=vegs%>
+		  		<input type="radio" name="pickem[<%=vegs%>]" 
+		  		value="<%=vegs%>" checked>  yes 
+			 	<input type="radio" name="pickem[<%=vegs%>]"> no </p>
+			<%end%>
 	<%end%>
 
 	<%if cheeze == nil%>
 
 		<%else%>
 			<%cheeze.each do |cheeze|%>
-				<%=cheeze%>
-					<p><input type="checkbox" name="pickem[]" value="<%=cheeze%>"> <%=cheeze%></p>
+				<p><%=cheeze%>
+					<input type="radio" name="pickem[<%=cheeze%>]" 
+					value="<%=cheeze%>" checked>   yes   
+				<input type="radio" name="pickem[<%=cheeze%>]"> 
+					  no </p> 
+			<%end%>
+	<%end%>
+
+		<%crust.each do |crust|%>
+		  <p>Crust
+			  <input type="radio" name="pickem[<%=crust%>]" 
+			  value="<%=crust%>" checked> <%=crust%></p>
 		<%end%>
-	<%end%>
 
-	<%crust.each do |crust|%>
-		<p><input type="checkbox" name="pickem[]" value="<%=crust%>"> <%=crust%></p>
-	<%end%>
+	<%if delivery == nil%>
 
-		Submit?????
-	<input type="submit" value="~SNARF~">
+		<%else%>
+		<p>Where You At ?
+		<input type="text" name="address"></p>
+	<%end%>		
+
+			<p>Submit?????
+					<input type="submit" value="~SNARF~"></p>
 
 </form>
 </body>
