@@ -9,7 +9,7 @@ post '/stuff' do
 	session[:vegs] = params[:veggies]
 	session[:cheeze] = params[:cheeze]
 	session[:crust] = params[:crust]
-	delivery = params[:delivery]
+	session[:delivery] = params[:delivery]
 	redirect '/confrm' 
 end
 #######################################################
