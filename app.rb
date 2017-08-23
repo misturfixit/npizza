@@ -16,21 +16,21 @@ end
 get '/confrm' do
 erb :confrm, locals:{meat:session[:meat],
 		vegs:session[:vegs],
-		cheeze:session[:cheeze],###need to put sauce in also
+		cheeze:session[:cheeze],
 		crust:session[:crust],
 		delivery:session[:delivery]
 		}
 end
 post '/chozen' do
-	choze = params[:pickem]
+	checked = params[:pickem]
 	session[:address] = params[:address]
-	session[:checked] = params[:pickem]
-	session[:delivery] = params[:delivery]
+	session[:pickem] = checked.values
+	delivery = params[:delivery]
 	redirect '/gotit'
 end	
 #######################################################
 get '/gotit' do
-	erb :results, locals:{checked:session[:checked],
+	erb :results, locals:{pickem:session[:pickem],
 			address:session[:address]	
 			}
 end	
