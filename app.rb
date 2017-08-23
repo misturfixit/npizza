@@ -25,11 +25,12 @@ post '/chozen' do
 	choze = params[:pickem]
 	session[:address] = params[:address]
 	session[:checked] = params[:pickem]
+	session[:delivery] = params[:delivery]
 	redirect '/gotit'
 end	
 #######################################################
 get '/gotit' do
 	erb :results, locals:{checked:session[:checked],
-			address:session[:address], delivery:session[:delivery]	
+			address:session[:address]	
 			}
 end	
