@@ -2,7 +2,8 @@ And Your order is as follows:
 <%checked.each_pair do |choice, value|%>
 	<%if value == "on"%>
 		<%checked.delete(choice)%>
-	<%else%>	
+	<%else%>
+	<img src = "/imgs/<%=value%>.jpg"  width="128.7" height="108.7">	
 <h1>	<%=value%> </h1>
 	<%end%>
 <%end%>	

@@ -13,6 +13,7 @@
 		<%else%>
 			<%meat.each do |meat|%>
 				<p><%=meat%>
+					<img src = "/imgs/<%=meat%>.jpg"  width="128.7" height="108.7">
 					<input type="radio" name="pickem[<%=meat%>]" 
 					value="<%=meat%>" checked>	yes 
 				<input type="radio" name="pickem[<%=meat%>]">  no  </p>
@@ -24,6 +25,7 @@
 		<%else%>
 			<%vegs.each do |vegs|%>
 				<p><%=vegs%>
+					<img src = "/imgs/<%=vegs%>.jpg"  width="128.7" height="108.7">
 		  		<input type="radio" name="pickem[<%=vegs%>]" 
 		  		value="<%=vegs%>" checked>  yes 
 			 	<input type="radio" name="pickem[<%=vegs%>]"> no </p>
@@ -35,6 +37,7 @@
 		<%else%>
 			<%cheeze.each do |cheeze|%>
 				<p><%=cheeze%>
+					<img src = "/imgs/<%=cheeze%>.jpg"  width="128.7" height="108.7">
 					<input type="radio" name="pickem[<%=cheeze%>]" 
 					value="<%=cheeze%>" checked>   yes   
 				<input type="radio" name="pickem[<%=cheeze%>]"> 
@@ -44,6 +47,7 @@
 
 		<%crust.each do |crust|%>
 		  <p>Crust
+		  	<img src = "/imgs/<%=crust%>.jpg"  width="128.7" height="108.7">
 			  <input type="radio" name="pickem[<%=crust%>]" 
 			  value="<%=crust%>" checked> <%=crust%></p>
 		<%end%>
