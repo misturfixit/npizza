@@ -30,6 +30,6 @@ end
 #######################################################
 get '/gotit' do
 	erb :results, locals:{checked:session[:checked],
-			address:session[:address]	
+			address:session[:address], delivery:session[:delivery]	
 			}
 end	

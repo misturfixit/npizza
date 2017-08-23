@@ -1,4 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
 And Your order is as follows: 
+		
+	</title>
+</head>
+<body>
+
+
+
+
 <%checked.each_pair do |choice, value|%>
 	<%if value == "on"%>
 		<%checked.delete(choice)%>
@@ -9,4 +21,9 @@ And Your order is as follows:
 <%end%>	
 
 And We're Delivering it to:
-<h1>	<%=address%> </h1>
+<h1>
+<img src = "/imgs/<%=delivery%>.jpg"  width="128.7" height="108.7">	
+	<%=address%> </h1>
+
+</body>
+</html>
