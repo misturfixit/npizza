@@ -25,7 +25,6 @@ post '/chozen' do
 	checked = params[:pickem]
 	session[:address] = params[:address]
 	session[:pickem] = checked.values
-	delivery = params[:delivery]
 	redirect '/gotit'
 end	
 #######################################################
