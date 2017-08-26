@@ -52,6 +52,12 @@
 			  value="<%=crust%>" checked> <%=crust%></p>
 		<%end%>
 
+		<%size.each do |size|%>
+		<p><img src = "/imgs/<%=size%>.jpg"  width="128.7" height="108.7">
+			  <input type="radio" name="pickem[<%=size%>]" 
+			  value="<%=size%>" checked> <%=size%></p>
+		<%end%>	  
+
 	<%if delivery == nil%>
 
 		<%else%>
