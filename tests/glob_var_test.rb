@@ -24,3 +24,7 @@ $global_variable = {}
 requests = {"pickem"=>{"NotCat"=>"NotCat", "Beef"=>"Beef", "Eggplant"=>"Eggplant", "Onjion"=>"Onjion", "Olives"=>"Olives", "Moozerr
 ella"=>"Moozerrella", "Prova_lone"=>"Prova_lone", "Fermunda"=>"Fermunda", "HandTouched"=>"HandTouched", "Small"=>"Small"
 }, "address"=>"1234 E-z Ave."}
+
+confirmations = {"pickem"=>{"NotCat"=>"NotCat", "Swausage"=>"on", "Beef"=>"Beef", "Eggplant"=>"Eggplant", "Onjion"=>"on", "Olives"=>"Oli
+ves", "Moozerrella"=>"Moozerrella", "MUH_rican"=>"on", "Prova_lone"=>"Prova_lone", "Fermunda"=>"on", "Thin"=>"Thin", "Sm
+all"=>"Small"}, "address"=>"1234 E-z Ave."}

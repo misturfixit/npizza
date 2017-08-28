@@ -14,7 +14,7 @@
 			<%meat.each do |meat|%>
 				<p><%=meat%>
 					<img src = "/imgs/<%=meat%>.jpg"  width="128.7" height="108.7">
-					<input type="radio" name="pickem[<%=meat%>]" 
+				<input type="radio" name="pickem[<%=meat%>]" 
 					value="<%=meat%>" checked>	yeah 
 				<input type="radio" name="pickem[<%=meat%>]" value = "nil">  nah  </p>
 			<%end%>
@@ -26,7 +26,7 @@
 			<%vegs.each do |vegs|%>
 				<p><%=vegs%>
 					<img src = "/imgs/<%=vegs%>.jpg"  width="128.7" height="108.7">
-		  		<input type="radio" name="pickem[<%=vegs%>]" 
+		  	<input type="radio" name="pickem[<%=vegs%>]" 
 		  		value="<%=vegs%>" checked>  yeah 
 			 	<input type="radio" name="pickem[<%=vegs%>]" value = "nil"> nah </p>
 			<%end%>
@@ -38,22 +38,23 @@
 			<%cheeze.each do |cheeze|%>
 				<p><%=cheeze%>
 					<img src = "/imgs/<%=cheeze%>.jpg"  width="128.7" height="108.7">
-					<input type="radio" name="pickem[<%=cheeze%>]" 
-					value="<%=cheeze%>" checked>   yeah   
-				<input type="radio" name="pickem[<%=cheeze%>]" value = "nil">  nah </p> 
+						<input type="radio" name="pickem[<%=cheeze%>]" 
+						value="<%=cheeze%>" checked>   yeah   
+						<input type="radio" name="pickem[<%=cheeze%>]" value = "nil"> nah </p> 
 			<%end%>
 	<%end%>
 
 		<%crust.each do |crust|%>
-		  <p>Crust
-		  	<img src = "/imgs/<%=crust%>.jpg"  width="128.7" height="108.7">
-			  <input type="radio" name="pickem[<%=crust%>]" 
+		<p>Crust
+		   <img src = "/imgs/<%=crust%>.jpg"  width="128.7" height="108.7">
+			   <input type="radio" name="pickem[<%=crust%>]" 
 			  value="<%=crust%>" checked> <%=crust%></p>
 		<%end%>
 
 		<%size.each do |size|%>
-		<p><img src = "/imgs/<%=size%>.jpg"  width="128.7" height="108.7">
-			  <input type="radio" name="pickem[<%=size%>]" 
+		<p>
+			 <img src = "/imgs/<%=size%>.jpg"  width="128.7" height="108.7">
+			   <input type="radio" name="pickem[<%=size%>]" 
 			  value="<%=size%>" checked> <%=size%></p>
 		<%end%>	  
 
@@ -62,7 +63,7 @@
 		<%else%>
 		<p>Where You At ?
 			<img src = "/imgs/delivery.jpg"  width="128.7" height="108.7">
-		<input type="text" name="address"></p>
+				<input type="text" name="address"></p>
 	<%end%>		
 
 			<p>Submit?????

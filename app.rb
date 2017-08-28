@@ -43,3 +43,9 @@ get '/gotit' do
 			address:session[:address]	
 			}
 end	
+post '/gotit' do
+	pizza1 = {}
+	pizza1 << session[:pickem]
+	@params = params
+	print @params
+end
