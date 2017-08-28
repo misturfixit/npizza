@@ -54,17 +54,17 @@
 		<%size.each do |size|%>
 			
 			<%cost = 0%>
-				<%if size == Large%>
-					<%cost + 15.00%>
-				<%elsif size == Med%>
-					<%cost + 10.00%>
-				<%elsif size == Small%>
-					<%cost + 5.00%>
+				<%if size == "Large"%>
+					<%cost += 15.00%>
+				<%elsif size == "Med"%>
+					<%cost += 10.00%>
+				<%else size == "Small"%>
+					<%cost += 5.00%>
 				<%end%>		
 
 		<p><img src = "/imgs/<%=size%>.jpg"  width="128.7" height="108.7">
 			   <input type="radio" name="pickem[<%=size%>]" 
-			  value="<%=size%>" checked>	<%=size%>	 </p>
+			  value="<%=size%>" checked>	<%=size%>	<%=cost%> </p>
 		
 
 		<%end%>	 
@@ -80,7 +80,7 @@
 
 			<p>Submit?????
 					<input type="submit" value="~SNARF~"></p>
-
+					<input type="submit" href='/gotit'>	
 </form>
 </body>
 </html>
