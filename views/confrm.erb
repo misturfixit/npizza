@@ -14,9 +14,9 @@
 			<%meat.each do |meat|%>
 				<p><%=meat%>
 					<img src = "/imgs/<%=meat%>.jpg"  width="128.7" height="108.7">
-				<input type="radio" name="pickem[<%=meat%>]" 
+				<input type="radio" name="pickem[]" 
 					value="<%=meat%>" checked>	yeah 
-				<input type="radio" name="pickem[<%=meat%>]" value = "nil">  nah  </p>
+				<input type="radio" name="pickem[]" value = "nil">  nah  </p>
 			<%end%>
 	<%end%>	
 
@@ -26,9 +26,9 @@
 			<%vegs.each do |vegs|%>
 				<p><%=vegs%>
 					<img src = "/imgs/<%=vegs%>.jpg"  width="128.7" height="108.7">
-		  	<input type="radio" name="pickem[<%=vegs%>]" 
+		  	<input type="radio" name="pickem[]" 
 		  		value="<%=vegs%>" checked>  yeah 
-			 	<input type="radio" name="pickem[<%=vegs%>]" value = "nil"> nah </p>
+			 	<input type="radio" name="pickem[]" value = "nil"> nah </p>
 			<%end%>
 	<%end%>
 
@@ -38,22 +38,22 @@
 			<%cheeze.each do |cheeze|%>
 				<p><%=cheeze%>
 					<img src = "/imgs/<%=cheeze%>.jpg"  width="128.7" height="108.7">
-						<input type="radio" name="pickem[<%=cheeze%>]" 
+						<input type="radio" name="pickem[]" 
 						value="<%=cheeze%>" checked>   yeah   
-						<input type="radio" name="pickem[<%=cheeze%>]" value = "nil"> nah </p> 
+						<input type="radio" name="pickem[]" value = "nil"> nah </p> 
 			<%end%>
 	<%end%>
 
 		<%crust.each do |crust|%>
 		<p>Crust
 		   <img src = "/imgs/<%=crust%>.jpg"  width="128.7" height="108.7">
-			   <input type="radio" name="pickem[<%=crust%>]" 
+			   <input type="radio" name="pickem[]" 
 			  value="<%=crust%>" checked>  <%=crust%>	 </p>
 		<%end%>
 
+		<%cost = 0%>
 		<%size.each do |size|%>
 			
-			<%cost = 0%>
 				<%if size == "Large"%>
 					<%cost += 15.00%>
 				<%elsif size == "Med"%>
@@ -63,11 +63,10 @@
 				<%end%>		
 
 		<p><img src = "/imgs/<%=size%>.jpg"  width="128.7" height="108.7">
-			   <input type="radio" name="pickem[<%=size%>]" 
-			  value="<%=size%>" checked>	<%=size%>	<%=cost%> </p>
-		
-
+			   <input type="radio" name="pickem[]" 
+			  value="<%=size%>" checked>	<%=size%>	 </p>
 		<%end%>	 
+				 <input type="hidden" name="pickem[]" value="<%=cost%>">
 
 
 	<%if delivery == nil%>
@@ -80,7 +79,7 @@
 
 			<p>Submit?????
 					<input type="submit" value="~SNARF~"></p>
-					<input type="submit" href='/gotit'>	
+						
 </form>
 </body>
 </html>

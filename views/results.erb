@@ -8,10 +8,12 @@
 <body>
 
 
+<form>
 <%pickem.each do |value|%>
 	<%if value == "nil"%>
 	
 		<%else%>
+		<input type="hidden" name="pickem[]" value="<%=value%>">
 	<img src = "/imgs/<%=value%>.jpg "  width="128.7" height="108.7">	
 <h1>	<%=value%>	 </h1>
 	
@@ -20,10 +22,17 @@
 
 And We're Delivering it to:
 	<img src = "/imgs/delivery.jpg"  width="128.7" height="108.7">	
-<h1>	<%=address%> Anda You Price is<%=cost%>  </h1>
+			<h2>	<%=address%>  </h2>
+			Anda You Price is 
+			<h3> <%=cost%> </h3>
+	
+		<h2>	You's Wanna Anudduh Pie??</h2>
 
+	<input type="radio" name="anudder" value="yes"> Yes
+	<input type="radio" name="anudder" value="no" checked> No
+	<input type="submit" value="Gawn">
+</form>
 
-<button><a href= "/">  Another Order?  </button>
 
 </body>
 </html>
